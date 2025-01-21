@@ -4,5 +4,5 @@ def new_in_line(my_list, idx, element):
     if idx < 0 or idx > len(my_list)
         return cp
 
-    copy[idx] = element
+    cp[idx] = element
     return cp
