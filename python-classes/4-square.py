@@ -9,7 +9,7 @@ class Square:
         """optional initialization with private attribute size, an int >= 0"""
         self.size = size
 
-    @property 
+    @property
     def size(self):
         """method to retrieve size value"""
         return self._size
@@ -26,4 +26,4 @@ class Square:
 
     def area(self):
         """returns area of the square"""
-        return (self.size**2)
+        return self.size**2
