@@ -12,7 +12,7 @@ class Square:
     @property
     def size(self):
         """method to retrieve size value"""
-        return self._size
+        return self.size
 
     @size.setter
     def size(self, value):
@@ -22,16 +22,16 @@ class Square:
         elif value < 0:
             raise ValueError("size must be >= 0")
         else:
-            self._size = value
+            self.size = value
 
     def area(self):
         """returns area of the square"""
-        return (self._size**2)
+        return (self.size**2)
     
     def my_print(self):
         """method that prints a square"""
-        if self.__size == 0:
+        if self.size == 0:
             print("")
         else:
-            for i in range(self.__size):
-                print(self.__size * "#")
+            for i in range(self.size):
+                print(self.size * "#")
