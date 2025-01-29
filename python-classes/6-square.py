@@ -7,7 +7,7 @@ class Square:
 
     def __init__(self, size=0):
         """optional initialization with private attrivute size, an int >= 0"""
-        self._size = size
+        self.size = size
 
     @property
     def size(self):
@@ -18,7 +18,7 @@ class Square:
     def size(self, value):
         """method to set size value"""
         if type(value) is not int:
-            raise TypeError("size must be an int")
+            raise TypeError("size must be an integer")
         elif value < 0:
             raise ValueError("size must be >= 0")
         else:
