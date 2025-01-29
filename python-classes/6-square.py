@@ -5,7 +5,6 @@
 class Square:
     """defines a square by its size"""
 
-
     def __init__(self, size=0):
         """optional initialization with private attrivute size, an int >= 0"""
         self._size = size
