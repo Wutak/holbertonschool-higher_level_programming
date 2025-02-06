@@ -4,6 +4,7 @@
 
 class BaseGeometry:
     """Ceci est une description"""
+
     def area(self):
         raise Exception("area() is not implemented")
 
@@ -16,6 +17,7 @@ class BaseGeometry:
 
 class Rectangle(BaseGeometry):
     """Ceci est une description"""
+
     def __init__(self, width, height):
         self.integer_validator("width", width)
         self.integer_validator("height", height)
