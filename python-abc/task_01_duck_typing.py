@@ -2,6 +2,7 @@
 from abc import ABC, abstractmethod
 import math
 
+
 class Shape(ABC):
     @abstractmethod
     def area(self):
@@ -9,6 +10,7 @@ class Shape(ABC):
 
     def perimeter(self):
         pass
+
 
 class Circle(Shape):
     def __init__(self, radius):
@@ -20,6 +22,7 @@ class Circle(Shape):
     def perimeter(self):
         return 2 * math.pi * self.radius
 
+
 class Rectangle(Shape):
     def __init__(self, width, height):
         self.width = width
@@ -30,6 +33,7 @@ class Rectangle(Shape):
 
     def perimeter(self):
         return 2 * (self.width + self.height)
+
 
 def shape_info(shape):
     print(f"Area: {shape.area()}")
