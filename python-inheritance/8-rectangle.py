@@ -1,10 +1,9 @@
 #!/usr/bin/python3
-"""write class rectangle inheriting basegeometry"""
+"""Ceci est une description"""
 
 
 class BaseGeometry:
-    """class BaseGeometry"""
-
+    """Ceci est une description"""
     def area(self):
         raise Exception("area() is not implemented")
 
@@ -14,9 +13,9 @@ class BaseGeometry:
         if value <= 0:
             raise ValueError(f"{name} must be greater than 0")
 
-class Rectangle(BaseGeometry):
-    """rectangle inheriting from basegoemetry"""
 
+class Rectangle(BaseGeometry):
+    """Ceci est une description"""
     def __init__(self, width, height):
         self.integer_validator("width", width)
         self.integer_validator("height", height)
