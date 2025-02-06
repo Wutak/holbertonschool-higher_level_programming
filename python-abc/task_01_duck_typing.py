@@ -10,7 +10,7 @@ class Shape(ABC):
         pass
 
 class Circle(Shape):
-    def __init(self, radius):
+    def __init__(self, radius):
         self.radius = radius
 
     def area(self):
