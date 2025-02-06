@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-
-
-class Verboselist(list):
+class VerboseList(list):
     def append(self, item):
         super().append(item)
         print(f"Added [{item]} to the list.")
