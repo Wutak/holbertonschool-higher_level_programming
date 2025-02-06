@@ -7,4 +7,8 @@ class MyList(list):
 
     def print_sorted(self):
         """print list sorted"""
-        print(sorted(self))
+        try:
+            print(sorted(self))
+        except TypeError:
+            print("Error: list contains incompatible types for sortting")
+
