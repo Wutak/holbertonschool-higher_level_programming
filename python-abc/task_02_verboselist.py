@@ -4,22 +4,23 @@ class VerboseList(list):
         super().append(item)
         print(f"Added [{item]} to the list.")
 
-    def extend(self, items):
-        super().extend(items)
-        print(f"Extended the list with {len(items)} items.")
+    def extend(self, iterable):
+        count = len(iterable)
+        super().extend(iterable)
+        print(f"Extended the list with [{count}] items.")
 
     def remove(self, item):
-        try:
-            super().remove(item)
+        if item in self:
             print(f"Removed [{item}] from the list.")
-        except ValueError:
+            super().remove(item)
+        else:
             print(f"Item [{item}] not found in the list.")
 
     def pop(self, index=-1):
-        try:
-            item = super().pop(index)
+        item = self[index] if len(self) > 0 else None
+        if item is not None:
             print(f"Popped[{item}] from the list.")
-            return item
-        except IndexError:
-            print("Attempted to pop from an empty list.")
-            raise
+            return super().pop(index)
+        else:
+            print("Cannot  pop from an empty list.")
+            return None
