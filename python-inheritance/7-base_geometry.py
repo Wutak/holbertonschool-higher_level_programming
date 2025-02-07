@@ -1,18 +1,22 @@
 #!/usr/bin/python3
-"""write class basegeometry"""
+"""This module implements the basegeometry class"""
 
 
-class BaseGeometry():
-    """BaseGeometry class"""
+class BaseGeometry:
+    """This class is empty for now"""
+    def __init__(self):
+        """Does nothing for now"""
+        pass
 
     def area(self):
-        """public instance method"""
+        """Raises an error for now due to lack of implementation"""
         raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
-        """public instance method"""
-        if type(value) is not int:
-            raise TypeError("[] must be an integer".format(name))
-
-        if value <= 0:
-            raise ValueError("[] mus tbe greater than 0".format(name))
+        """This method will validate value if conditions are respected"""
+        if isinstance(value, bool):
+            raise TypeError(f"{name} must be an integer")
+        elif not isinstance(value, int):
+            raise TypeError(f"{name} must be an integer")
+        elif value <= 0:
+            raise ValueError(f"{name} must be greater than 0")
