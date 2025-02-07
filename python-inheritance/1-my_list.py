@@ -3,8 +3,7 @@
 
 
 class MyList(list):
-"""MyList inherits from list"""
-
+    """MyList inherits from list"""
     def print_sorted(self):
         """print list sorted"""
         if not isinstance(self, list):
