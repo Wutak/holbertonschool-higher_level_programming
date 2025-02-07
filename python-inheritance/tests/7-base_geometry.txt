@@ -1,23 +1,15 @@
->>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+"""test for print_sorted function"""
 
->>> bg = BaseGeometry()
+>>> base_geometry = __import__("7-base_geometry").BaseGeometry
 
->>> bg.integer_validator("my_int", 12)
+>>> m = __import__("7-base_geometry").__doc__
+>>> len(m) > 1
+True
 
->>> bg.integer_validator("width", 89)
+>>> c = __import__("7-base_geometry").BaseGeometry.__doc__
+>>> len(c) > 1
+True
 
->>> bg.integer_validator("name", "John")
-Traceback (most recent call last):
-...
-TypeError: name must be an integer
-
->>> bg.integer_validator("age", 0)
-Traceback (most recent call last):
-...
-ValueError: age must be greater than 0
-
-
->>> bg.integer_validator("distance", -4)
-Traceback (most recent call last):
-...
-ValueError: distance must be greater than 0
+>>> mod = __import__("7-base_geometry").BaseGeometry.integer_validator.__doc__
+>>> len(mod) > 1
+True

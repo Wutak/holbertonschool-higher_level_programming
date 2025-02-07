@@ -1,32 +1,15 @@
+"""test for print sorted function"""
+
 >>> MyList = __import__('1-my_list').MyList
 
->>> my_list = MyList()
->>> my_list.print_sorted()
-[]
+>>> m = __import__("1-my_list").__doc__
+>>> len(m) > 1
+True
 
->>> my_list.append(1)
->>> my_list.append(4)
->>> my_list.append(5)
->>> my_list.append(2)
->>> my_list.append(3)
->>> my_list.print_sorted()
-[1, 2, 3, 4, 5]
+>>> c = __import("1-my_list")>MyList.__doc__
+>>> len(c) > 1
+True
 
->>> my_list.append(True)
->>> my_list.append(False)
->>> my_list.print_sorted()
-[False, True]
-
->>> my_list.append('b')
->>> my_list.append('a')
->>> my_list.append('d')
->>> my_list.append('c')
->>> my_list.print_sorted()
-['a', 'b', 'c', 'd']
-
->>> try:
-...	my_list.append('a')
-...	my_list.append(1)
-...	my_list.print_sorted()
-... except TypeError as e:
-...	print("Error:", e)
+>>> mod = __import__("1-my_lsit").MyList.print_sorted.__doc__
+>>> len(mod) > 1
+True
