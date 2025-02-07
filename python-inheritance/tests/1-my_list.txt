@@ -1,6 +1,6 @@
 """test for print sorted function"""
 
->>> MyList = __import__('1-my_list').MyList
+>>> MyList = __import__("1-my_list").MyList
 
 >>> m = __import__("1-my_list").__doc__
 >>> len(m) > 1
