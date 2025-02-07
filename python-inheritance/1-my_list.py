@@ -1,11 +1,13 @@
 #!/usr/bin/python3
-"""MyList inherits from list and print it sorted"""
+"""This module refers to the MyList class"""
 
 
 class MyList(list):
-    """MyList inherits from list"""
+    """This class inherits from list and
+    will implement methods to apply on"""
+
     def print_sorted(self):
-        """print list sorted"""
+        """prints the sorted version of the object"""
         if not isinstance(self, list):
             raise AttributeError("instance must be a list")
         else:
