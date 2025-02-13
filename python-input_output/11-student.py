@@ -13,12 +13,16 @@ class Student:
 
     def to_json(self, attrs=None):
         """json"""
-        if isinstance(attrs, list):
-            return {attr: getattr(self, attr)
-                    for attr in attrs if hasattr(self, attr)}
-            return self.__dict__
+        if attrs is None:
+            return vars(self)
+        else:
+            mydict = {}
+            for i in attrs:
+                if hasattr(self, i):
+                    mydict[i] = getattr(self, i)
+        return mydict
 
     def reload_from_json(self, json):
         """json"""
-        for key, value in json.items():
-            setattr(self, key, value)
+        for key in json:
+            setattr(self, key, json[key])
