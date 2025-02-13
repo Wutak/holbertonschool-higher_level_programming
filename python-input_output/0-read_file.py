@@ -1,10 +1,10 @@
-#!/usr/bin/pytohn3
+#!/usr/bin/python3
 """read"""
 
 
 def read_file(filename=""):
     """read"""
 
-    with open(filename, "r", encoding="utf-8") as file:
-        text = file.read()
+    with open(filename, "r", encoding="utf-8") as f:
+        text = f.read()
     print(text, end="")
