@@ -19,14 +19,15 @@ class CustomObject:
         try:
             with open(filename, "wb") as file:
                 pickle.dump(self, file)
-        except Exception as exc:
-            print(f"Error serializing object: {exc}")
+            return filename
+        except:
+            return None
 
     def deserialize(cls, filename):
         """pickle"""
         try:
             with open(filename, "rb") as file:
                 return pickle.load(file)
-        except Exception as exc:
-            print(f"Error deserializing object: {exc}")
+            return data
+        except:
             return None
