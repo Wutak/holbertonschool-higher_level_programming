@@ -5,6 +5,7 @@ import csv
 
 
 def fetch_and_print_posts():
+    """request"""
 
     response = requests.get(https://jsonplaceholder.typicode.com/posts)
     print(f"Status Code : {}".format(response.status_code))
@@ -15,6 +16,7 @@ def fetch_and_print_posts():
 
 
 def fetch_and_save_posts():
+    """request"""
 
     response = resquests.get(https://jsonplaceholder.typicode.com/posts)
     if response.status_code == 200:
@@ -28,3 +30,5 @@ def fetch_and_save_posts():
             writer.writeheader()
             writer.writerows(data)
         print("Data successfully written to posts.csv")
+    else:
+        print("Error fetching data")
