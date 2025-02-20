@@ -1,14 +1,12 @@
 #!/usr/bin/python3
 """http server"""
 import http.server
-"""cr√er un serveur HTTP"""
 import socketserver
-"""g√rer les connexions r√seau"""
 import json
 
 
 class http_SubClass(http.server.BaseHTTPRequestHandler):
-    """g√re les requ√tes ™®ht de type GET"""
+    """ge√re les reqe√tes tp de type GET"""
 
     def do_GET(self):
         """http server"""
@@ -37,7 +35,7 @@ class http_SubClass(http.server.BaseHTTPRequestHandler):
             self.wfile.write(json.dumps(dataset).encode("utf-8"))
 
         elif self.path == "/status":
-            """Statut. Le serveur r√pond ok"""
+            """Statut. Le serveur re√pond ok"""
             self.send_response(200)
             self.send_header("Content-type", "text/plain")
             self.end_headers()
@@ -50,11 +48,8 @@ class http_SubClass(http.server.BaseHTTPRequestHandler):
             self.wfile.write(b"Endpoint not found")
 
 
-"""D√marrage du serveur"""
+"""De√marrage du serveur"""
 PORT = 8000
-"""le serveur √coute sur le port 8000"""
 with socketserver.TCPServer(("", PORT), http_SubClass) as httpd:
-    """D√marre un serveur TCP utilisant la classe http_SubClass pour g√rer les requ√tes"""
     print("serving at port", PORT)
     httpd.serve_forever()
-    """le serveur tourne en continue pour g√rer les requ√tes"""
