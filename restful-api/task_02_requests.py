@@ -8,6 +8,7 @@ def fetch_and_print_posts():
     """request"""
 
     response = requests.get("https://jsonplaceholder.typicode.com/posts")
+
     print(f"Status Code: {response.status_code}")
     if response.status_code == 200:
         posts = response.json()
@@ -21,6 +22,7 @@ def fetch_and_save_posts():
     """request"""
 
     response = resquests.get("https://jsonplaceholder.typicode.com/posts")
+
     if response.status_code == 200:
         posts = response.json()
 
@@ -34,6 +36,6 @@ def fetch_and_save_posts():
                     "title": post["title"],
                     "body": post["body"]})
 
-        print("Data successfully written to posts.csv")
+        print("Data successfully saved to posts.csv")
     else:
         print("Error fetching data")
