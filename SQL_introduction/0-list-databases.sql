@@ -1,3 +1,2 @@
 -- listing database
--- query database
-SHOW DATABASE
+SHOW DATABASES;
