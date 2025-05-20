@@ -1,9 +1,8 @@
 #!/usr/bin/python3
-"""Class"""
+"""rectangle"""
 
 
-class Square:
-    """Square"""
-
+class Rectangle:
+    """class"""
     def __init__(self):
         pass

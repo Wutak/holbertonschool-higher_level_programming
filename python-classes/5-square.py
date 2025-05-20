@@ -12,9 +12,9 @@ class Square:
     @property
     def size(self):
         """retrieve size"""
-        return self._size
+        return self.size
 
-    @size_setter
+    @size.setter
     def size(self, value):
         """set size"""
         if not isinstance(size, int):
@@ -26,7 +26,7 @@ class Square:
 
     def area(self):
         """area"""
-        return self._size**2
+        return self.size**2
 
     def my_print(self):
         """print"""
