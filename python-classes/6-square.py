@@ -17,7 +17,7 @@ class Square:
     @size.setter
     def size(self, value):
         """set size"""
-        if not isinstance(size, int):
+        if not isinstance(value, int):
             raise TypeError("size must be an integer")
         elif value < 0:
             raise ValueError("size must be >= 0")
@@ -26,7 +26,7 @@ class Square:
 
     def area(self):
         """area"""
-        return self._size**2
+        return self.size**2
 
     def my_print(self):
         """print"""
