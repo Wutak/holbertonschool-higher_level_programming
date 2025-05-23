@@ -24,14 +24,13 @@ class Rectangle:
             raise ValueError("width must be >= 0")
         self.__width = value
 
-
     @property
     def height(self):
         """height"""
         return self.__height
 
     @height.setter
-    def  height(self, value):
+    def height(self, value):
         """setter"""
         if not isinstance(value, int):
             raise TypeError("height must be an integer")

@@ -30,7 +30,7 @@ class Rectangle:
         return self.__height
 
     @height.setter
-    def  height(self, value):
+    def height(self, value):
         """setter"""
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
@@ -46,11 +46,11 @@ class Rectangle:
         """perimeter"""
         if self.__width == 0 or self.__height == 0:
             return (0)
-        return((self.__width * 2) + (self.__height * 2))
+        return ((self.__width * 2) + (self.__height * 2))
 
     def __str__(self):
         """str"""
-        if self.__width == 0 or self.height == 0:
+        if self.__width == 0 or self.__height == 0:
             return ("")
 
         rect = []
@@ -68,4 +68,4 @@ class Rectangle:
 
     def __del__(self):
         """delete"""
-        print("Bye Rectangle...")
+        print("Bye rectangle...")
