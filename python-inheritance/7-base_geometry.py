@@ -5,10 +5,14 @@
 class BaseGeometry():
     """class"""
 
+    def __init__(self):
+        """init"""
+        pass
+
     def area(self):
         """area"""
-        raise Exception("area()is not implemented")
-    
+        raise Exception("area() is not implemented")
+
     def integer_validator(self, name, value):
         """validator"""
         if not isinstance(value, int):

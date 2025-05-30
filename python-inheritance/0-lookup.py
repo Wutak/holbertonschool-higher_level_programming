@@ -2,6 +2,6 @@
 """lookup"""
 
 
-def  lookup(obj):
+def lookup(obj):
     """lookup"""
     return dir(obj)
