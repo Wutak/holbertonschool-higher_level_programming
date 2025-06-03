@@ -2,7 +2,7 @@
 """square"""
 
 
-Rectangle = __import__('9-rectangle.py').Rectangle
+Rectangle = __import__('9-rectangle').Rectangle
 
 
 class Square(Rectangle):
@@ -17,4 +17,4 @@ class Square(Rectangle):
         return (self.__size ** 2)
 
     def __str__(self):
-        return ("Square {}/{}".format(self.__width, self.__height)
+        return "Square {}/{}".format(self.__width, self.__height)
