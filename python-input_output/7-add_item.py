@@ -12,7 +12,7 @@ def main():
     filename = "add_item.json"
 
     if os.path.exists(filename):
-        item = load_from_json_file(filename)
+        items = load_from_json_file(filename)
     else:
         items = []
 
