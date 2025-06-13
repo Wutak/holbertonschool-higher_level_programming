@@ -9,6 +9,7 @@ class http_SubClass(http.server.BaseHTTPRequestHandler):
     """subclass"""
 
     def do_GET(self):
+        """server"""
 
         if self.path == "/":
             self.send_response(200)
@@ -36,6 +37,11 @@ class http_SubClass(http.server.BaseHTTPRequestHandler):
             self.send_header("Content-type", "text/plain")
             self.end_headers()
             self.wfile.write(b"OK")
+        else:
+            self.send_response(404)
+            self.send_header('Content-type', 'text/plain')
+            self.end_headers()
+            self.wfile.write(b"Endpoint not found")
 
 
 PORT = 8000
