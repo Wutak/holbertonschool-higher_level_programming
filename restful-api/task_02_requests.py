@@ -10,6 +10,7 @@ response = requests.get(url)
 
 
 def fetch_and_print_posts(response):
+    """print post"""
 
     print(f"Status Code: {response.status_code}")
     if response.status_code == 200:
@@ -21,6 +22,7 @@ def fetch_and_print_posts(response):
 
 
 def fetch_and_save_posts(response):
+    """save posts"""
 
     if response.status_code == 200:
         posts = response.json()
