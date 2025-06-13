@@ -5,13 +5,11 @@ import json
 import csv
 
 
-url = "https://jsonplaceholder.typicode.com/posts"
-response = requests.get(url)
-
-
-def fetch_and_print_posts(response):
+def fetch_and_print_posts():
     """print post"""
 
+    url = "https://jsonplaceholder.typicode.com/posts"
+    response = requests.get(url)
     print(f"Status Code: {response.status_code}")
     if response.status_code == 200:
         posts = response.json()
@@ -21,9 +19,11 @@ def fetch_and_print_posts(response):
         print(f"Error fetching data")
 
 
-def fetch_and_save_posts(response):
+def fetch_and_save_posts():
     """save posts"""
 
+    url = "https://jsonplaceholder.typicode.com/posts"
+    response = requests.get(url)
     if response.status_code == 200:
         posts = response.json()
 
