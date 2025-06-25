@@ -9,6 +9,7 @@ class http_SubClass(http.server.BaseHTTPRequestHandler):
     """subclass"""
 
     def do_GET(self):
+        """server"""
 
         if self.path == "/":
             self.send_response(200)
