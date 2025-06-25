@@ -36,3 +36,14 @@ class http_SubClass(http.server.BaseHTTPRequestHandler):
             self.send_header("Content-type", "text/plain")
             self.end_headers()
             self.wfile.write(b"OK")
+        else:
+            self.send_response(404)
+            self.send_header('Content-type', 'text/plain')
+            self.end_headers()
+            self.wfile.write(b"Endpoint not found")
+
+
+PORT = 8000
+with socketserver.TCPServer(("", PORT), http_SubClass) as httpd:
+    print("serving at port", PORT)
+    httpd.serve_forever()
