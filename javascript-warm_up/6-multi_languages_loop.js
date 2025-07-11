@@ -4,13 +4,15 @@ const lines = [
 	'Python is cool',
 	'JavaScript is amazing',
 ];
-let nb = '';
+
+let result = '';
 let i = 0;
-while (i < lines.length){
-	nb += lines[i];
+while (i < lines.length) {
+	result += lines[i];
 	if (i !== lines.length - 1){
-		nb += '\n';
+		result += '\n';
 	}
 	i++;
 }
-console.log(nb);
+
+console.log(result);
