@@ -1,3 +1,4 @@
+#!/usr/bin/node
 const size = Number(process.argv[2]);
 
 if (!Number.isInteger(size)) {
