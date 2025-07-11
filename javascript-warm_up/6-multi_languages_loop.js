@@ -9,7 +9,7 @@ let i = 0;
 while (i < lines.length){
 	nb += lines[i];
 	if (i !== lines.length - 1){
-		result += '\n';
+		nb += '\n';
 	}
 	i++;
 }
