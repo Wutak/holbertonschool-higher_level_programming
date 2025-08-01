@@ -19,13 +19,13 @@ class CustomObject:
         print("Is student: {}".format(self.is_student))
 
     def serialize(self, filename):
-        try:
+        """serialize"""
             with open(filename, "wb") as file:
                 filename = pickle.dump(self, file)
             return filename
             
     def deserialize(cls, filename):
-        try:
+        """deserialize"""
             with open(filename, "rb") as file:
                 return (pickle.load(file.read()))
         except Exception:
