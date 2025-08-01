@@ -26,6 +26,7 @@ class CustomObject:
             
     def deserialize(cls, filename):
         """deserialize"""
+        try:
             with open(filename, "rb") as file:
                 return (pickle.load(file.read()))
         except Exception:
