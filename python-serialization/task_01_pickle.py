@@ -14,14 +14,15 @@ class CustomObject:
         self.is_student = is_student
 
     def display(self):
+        """display"""
         print("Name: {}".format(self.name))
         print("Age: {}".format(self.age))
         print("Is student: {}".format(self.is_student))
 
     def serialize(self, filename):
         """serialize"""
-            with open(filename, "wb") as file:
-                pickle.dump(self, file)
+        with open(filename, "wb") as file:
+            pickle.dump(self, file)
             
     def deserialize(cls, filename):
         """deserialize"""
