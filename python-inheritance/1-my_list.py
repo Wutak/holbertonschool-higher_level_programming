@@ -3,7 +3,9 @@
 
 
 class Mylist(list):
-    """mylist"""
+    """
+    mylist
+    """
 
     def print_sorted(self):
         """print"""
