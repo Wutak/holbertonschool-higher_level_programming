@@ -23,6 +23,6 @@ if __name__ == "__main__":
 
     result = cursor.fetchall()
     cities_names = ", ".join(row[0] for row in results)
-        print(cities_names)
+    print(cities_names)
     cursor.close()
     db.close()
