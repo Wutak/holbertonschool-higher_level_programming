@@ -1,0 +1,17 @@
+#!/usr/bin/python3
+"""csv"""
+
+import csv
+import json
+
+def convert csv_to_json(filename):
+    """function to convert csv to json"""
+    try:
+        with open(filename, 'r', newline='') as csv_file:
+            reader = csv.DictReader(filename)
+            rows = list(reader)
+        with open('tbd.json', 'w') as json_file:
+            json.dump(rows, json_file)
+        return True
+    except FileNotFoundError:
+        return False
