@@ -4,7 +4,7 @@ import csv
 import json
 
 
-def convert csv_to_json(filename):
+def convert_csv_to_json(filename):
     """function to convert csv to json"""
     try:
         with open(filename, 'r', newline='') as csv_file:
