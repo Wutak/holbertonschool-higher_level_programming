@@ -8,9 +8,9 @@ def convert csv_to_json(filename):
     """function to convert csv to json"""
     try:
         with open(filename, 'r', newline='') as csv_file:
-            reader = csv.DictReader(filename)
+            reader = csv.DictReader(csv_file)
             rows = list(reader)
-        with open('tbd.json', 'w') as json_file:
+        with open('data.json', 'w') as json_file:
             json.dump(rows, json_file)
         return True
     except FileNotFoundError:
