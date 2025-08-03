@@ -15,10 +15,10 @@ if __name__ == "__main__":
                          port=3306)
 
     cursor = db.cursor()
-    query = "SELECT * FROM states WHERE name = '{}'
-    ORDER BY id ASC;".format(state_name)
 
-    cursor.execute(query)
+    cursor.execute(
+            "SELECT * FROM states WHERE name = '{}' ORDER BY id ASC;".format(state_name))
+
     result = cursor.fetchall()
     for row in result:
         print(row)
