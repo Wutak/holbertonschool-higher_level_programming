@@ -14,7 +14,7 @@ if __name__ == "__main__":
                          db=database_name,
                          port=3306)
 
-    cursor = db.cursor
+    cursor = db.cursor()
     query = "SELECT * FROM states WHERE name = '{}' ORDER BY id ASC;".format(state_name)
     cursor.execute(query)
     result = cursor.fetchall()
