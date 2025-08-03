@@ -7,7 +7,7 @@ class Mylist(list):
 
     def print_sorted(self):
         """print"""
-        if not isinstance(self, list):
-            raise AttributeError("instance must be a list")
+        if not isinstance(self, int):
+            raise AttributeError("instance must be a int")
         else:
             print(sorted(self))
